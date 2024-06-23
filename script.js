@@ -12,3 +12,7 @@ for (let i = 0; i < 16; i++) {
   }
   container.appendChild(row);
 }
+
+container.addEventListener("mouseover", (e) => {
+  e.target.setAttribute("style", "background: blue;");
+})
