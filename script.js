@@ -1,4 +1,5 @@
 const container = document.querySelector("#container");
+const button = document.querySelector("#newGrid");
 
 for (let i = 0; i < 16; i++) {
   const row = document.createElement("div");
@@ -7,12 +8,15 @@ for (let i = 0; i < 16; i++) {
   for (let j = 0; j < 16; j++) {
     const col = document.createElement("div");
 		col.classList.add("col");
-		col.textContent = j;
 		row.appendChild(col);
   }
   container.appendChild(row);
 }
 
 container.addEventListener("mouseover", (e) => {
-  e.target.setAttribute("style", "background: blue;");
+  e.target.setAttribute("style", "background: lightBlue;");
+})
+
+button.addEventListener("click", () => {
+  container.textContent = ""
 })
