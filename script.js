@@ -18,5 +18,17 @@ container.addEventListener("mouseover", (e) => {
 })
 
 button.addEventListener("click", () => {
-  container.textContent = ""
+  container.textContent = "";
+	let size = +prompt("Please input the side size:");
+	for (let i = 0; i < size; i++) {
+		const row = document.createElement("div");
+		row.classList.add("row");
+		
+		for (let j = 0; j < size; j++) {
+			const col = document.createElement("div");
+			col.classList.add("col");
+			row.appendChild(col);
+		}
+		container.appendChild(row);
+	}
 })
