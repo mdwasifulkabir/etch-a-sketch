@@ -14,12 +14,18 @@ for (let i = 0; i < 16; i++) {
 }
 
 container.addEventListener("mouseover", (e) => {
-  e.target.setAttribute("style", "background: lightBlue;");
+	const randColor = getRandomColor();
+  e.target.style.background = randColor;
 })
 
 button.addEventListener("click", () => {
   container.textContent = "";
-	let size = +prompt("Please input the side size:");
+	let size;
+
+	do {
+		size = +prompt("Please input a size (1-100)");	
+	} while (isNaN(size) || size > 100 || size <= 0);
+    
 	for (let i = 0; i < size; i++) {
 		const row = document.createElement("div");
 		row.classList.add("row");
@@ -32,3 +38,11 @@ button.addEventListener("click", () => {
 		container.appendChild(row);
 	}
 })
+
+function getRandomColor() {
+	const getRandomVal = () => Math.floor(Math.random() * 256);
+	const r = getRandomVal();
+	const g = getRandomVal();
+	const b = getRandomVal();
+	return `rgb(${r}, ${g}, ${b})`
+}
