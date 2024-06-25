@@ -21,7 +21,6 @@ container.addEventListener("mouseover", (e) => {
 button.addEventListener("click", () => {
   container.textContent = "";
 	let size;
-
 	do {
 		size = +prompt("Please input a size (1-100)");	
 	} while (isNaN(size) || size > 100 || size <= 0);
