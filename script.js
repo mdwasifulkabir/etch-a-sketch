@@ -1,5 +1,6 @@
 const container = document.querySelector("#container");
 const button = document.querySelector("#newGrid");
+const clearButton = document.querySelector("#clearButton");
 
 for (let i = 0; i < 16; i++) {
   const row = document.createElement("div");
@@ -17,6 +18,13 @@ container.addEventListener("mouseover", (e) => {
 	const randColor = getRandomColor();
   e.target.style.background = randColor;
 })
+
+clearButton.addEventListener("click", () => {
+	const columns = document.querySelectorAll(".col");
+	columns.forEach(col => {
+		col.style.background = "#ffffff";
+	});
+});
 
 button.addEventListener("click", () => {
   container.textContent = "";
