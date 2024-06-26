@@ -1,2 +1,2 @@
-# etch-a-sketch
-A etch-a-sketch app made with javascript to learn DOM manipulation.
+# Etch-A-Sketch
+A sketchpad made with javascript to learn DOM manipulation.
