@@ -1,11 +1,12 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  gap: 20px;
   height: 100vh;
   width: 100vw;
 }
@@ -13,9 +14,32 @@ body {
 #container {
   display: flex;
   flex-direction: column;
-  width: 30vw;
-  height: 30vw;
+  width: 70vh;
+  height: 70vh;
   box-shadow: 3px 3px 10px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  display: flex;
+  margin: 0;
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+#buttonContainer {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  background-color: #3882F6;
+  color: #ffffff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .row {
